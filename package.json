@@ -1,0 +1,42 @@
+{
+  "name": "billcheap-contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node": "npx hardhat node",
+    "deploy": "npx hardhat run scripts/deploy.ts --network testnet",
+    "upgrade": "npx hardhat run scripts/upgrade.ts --network testnet",
+    "verify:billpoint": "npx hardhat verify --contract 'contracts/BillPoint.sol:BillPoint' 0xa2e97C9EdEF613741d46368a7c5e7CEFDfFb16D5 --network testnet",
+    "verify:gateway": "npx hardhat verify --contract 'contracts/Gateway.sol:Gateway' 0x0E170c6fDba74647BEd0947a579FB40A0c983A51 --network testnet"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ignition": "^0.15.0",
+    "@nomicfoundation/hardhat-ignition-viem": "^0.15.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@nomicfoundation/hardhat-viem": "^2.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/contracts-upgradeable": "^5.1.0",
+    "@openzeppelin/hardhat-upgrades": "^3.8.0",
+    "@types/chai": "^4.2.0",
+    "@types/chai-as-promised": "^7.1.6",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=18.0.0",
+    "chai": "^4.2.0",
+    "hardhat": "^2.22.17",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": ">=8.0.0",
+    "typescript": "~5.0.4",
+    "viem": "^2.7.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
